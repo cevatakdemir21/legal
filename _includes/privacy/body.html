@@ -1,0 +1,21 @@
+{%- comment -%}
+Assembles a privacy policy from the flags in the calling page's front matter.
+
+  services:  any of  icloud, storekit, notifications,
+                     posthog, sentry, revenuecat, supabase
+  Only the blocks listed are emitted, so a page never claims a service the app
+  does not use. See README.md for the full list of options.
+{%- endcomment -%}
+
+{% include privacy/intro.html %}
+{% include privacy/local-data.html %}
+
+{% if page.services contains 'icloud' %}{% include privacy/icloud.html %}{% endif %}
+{% if page.services contains 'supabase' %}{% include privacy/supabase.html %}{% endif %}
+{% if page.services contains 'revenuecat' %}{% include privacy/revenuecat.html %}{% endif %}
+{% if page.services contains 'posthog' %}{% include privacy/posthog.html %}{% endif %}
+{% if page.services contains 'sentry' %}{% include privacy/sentry.html %}{% endif %}
+{% if page.services contains 'notifications' %}{% include privacy/notifications.html %}{% endif %}
+{% if page.services contains 'storekit' %}{% include privacy/storekit.html %}{% endif %}
+
+{% include privacy/tail.html %}

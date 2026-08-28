@@ -1,0 +1,22 @@
+<h2>iCloud sync</h2>
+
+<p>
+  {{ page.app_name }} can keep your data in step across your devices using Apple’s
+  iCloud, through the CloudKit framework built into iOS.
+  {% if page.icloud_default_off %}This is off by default and only starts when you turn it on in the App’s settings.{% endif %}
+</p>
+
+<p>
+  When syncing is on, your data is stored in the <strong>private database</strong> of
+  <em>your own</em> iCloud account. It is not stored on our servers and it is not
+  shared with us. We cannot see, retrieve or restore it. Apple provides this storage
+  as our processor, and its handling of the data is governed by
+  <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a> and your
+  iCloud terms with Apple.
+</p>
+
+<p>
+  Turning syncing off stops further data from leaving your device. Any copy already in
+  iCloud stays in your account until you remove it, which you can do from
+  <em>Settings → [your name] → iCloud → Manage Account Storage</em> on your device.
+</p>

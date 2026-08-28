@@ -1,0 +1,135 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1c1c1e;
+  --muted: #6c6c70;
+  --rule: #e5e5ea;
+  --link: #0b6bcb;
+  --card: #f7f7f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111113;
+    --fg: #ececf0;
+    --muted: #9a9aa0;
+    --rule: #2c2c30;
+    --link: #6cb0ff;
+    --card: #1a1a1d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 3rem 1.25rem 5rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  margin: 2.6rem 0 0.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+}
+
+h3 {
+  font-size: 1.02rem;
+  margin: 1.6rem 0 0.4rem;
+}
+
+p, ul, ol { margin: 0 0 1rem; }
+
+ul, ol { padding-left: 1.35rem; }
+
+li { margin-bottom: 0.35rem; }
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--card);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 2.5rem;
+}
+
+.subtitle .app-name { font-weight: 600; color: var(--fg); }
+
+.backlink {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.backlink:hover { color: var(--link); }
+
+.note {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+  font-size: 0.95rem;
+}
+
+.app-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.app-list > li {
+  border-top: 1px solid var(--rule);
+  padding: 1.1rem 0;
+}
+
+.app-list h2 {
+  border: 0;
+  padding: 0;
+  margin: 0 0 0.3rem;
+  font-size: 1.15rem;
+}
+
+.app-list .links a { margin-right: 1.1rem; font-size: 0.95rem; }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer a { color: var(--muted); }

@@ -1,0 +1,22 @@
+title: Legal
+description: Privacy policies, terms of use and support pages for apps by Cevat Akdemir.
+url: https://cevatakdemir21.github.io
+baseurl: /legal
+
+developer_name: Cevat Akdemir
+support_email: cevatsupport@gmail.com
+jurisdiction: the Republic of Türkiye
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

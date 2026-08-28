@@ -1,0 +1,29 @@
+<h2>Hosted content ({{ page.supabase_purpose | default: "Supabase" }})</h2>
+
+<p>
+  {{ page.app_name }} retrieves{% if page.supabase_writes %} and stores{% endif %} certain
+  content from a database we host with <a href="https://supabase.com">Supabase</a>.
+  {{ page.supabase_description | default: "This is the App’s own shared content, not your personal data." }}
+</p>
+
+<p>
+  <strong>We do not use Supabase for accounts or authentication.</strong>
+  {{ page.app_name }} has no sign-up, no log-in and no user profiles, so no name, email
+  address or password is stored there.
+</p>
+
+{% if page.supabase_writes %}
+<p>
+  Where the App does send data to this database, it sends only
+  {{ page.supabase_written_data | default: "the specific items described in the App at the point you submit them" }},
+  without an identifier that links them to you personally.
+</p>
+{% endif %}
+
+<p>
+  Like any internet service, the hosting provider processes the IP address your request
+  comes from in order to deliver the response and to protect the service from abuse.
+  Supabase acts as our data processor and provides protection for this data equal to
+  that described in this policy; see the
+  <a href="https://supabase.com/privacy">Supabase Privacy Policy</a>.
+</p>

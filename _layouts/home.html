@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+<main>
+{{ content }}
+
+<footer>
+  <p>
+    Apps by {{ site.developer_name }} ·
+    <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>
+  </p>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<p>
+  This Privacy Policy explains what {{ page.app_name }} (“the App”) does with your
+  information. The App is developed and published by {{ site.developer_name }}, an
+  individual developer based in {{ site.jurisdiction }} (“we”, “us”). We are the data
+  controller for the limited processing described below.
+</p>
+
+<p>
+  We have written this policy to be specific rather than generic: it describes only
+  what {{ page.app_name }} actually does. If a service is not named here, the App does
+  not use it.
+</p>
+
+<h2>The short version</h2>
+
+<ul>
+  <li>The App does not require an account, and we do not ask you to sign up or log in.</li>
+  <li>We do not sell your personal information, and we never have.</li>
+  <li>We do not use your data to serve you advertising, and the App contains no ad networks.</li>
+  {% unless page.services contains 'posthog' or page.services contains 'sentry' %}
+  <li>The App contains no analytics, tracking or crash-reporting SDKs.</li>
+  {% endunless %}
+  <li>Your content stays on your device{% if page.services contains 'icloud' %}, and in your own iCloud account if you turn on syncing{% endif %}.</li>
+</ul>

@@ -1,0 +1,29 @@
+<h2>Crash and error reporting (Sentry)</h2>
+
+<p>
+  {{ page.app_name }} uses <a href="https://sentry.io">Sentry</a> to report crashes and
+  errors, so that faults can be diagnosed and fixed.
+</p>
+
+<p>A crash report contains:</p>
+
+<ul>
+  <li>the technical stack trace describing where in the code the failure occurred;</li>
+  <li>app version, device model, operating system version, and device state at the time (such as free memory);</li>
+  <li>a randomly generated installation identifier, so repeated reports from one device can be grouped.</li>
+</ul>
+
+<p>
+  <strong>Crash reports are not intended to contain the content you create.</strong> We
+  do not attach your data to reports, and we do not send Sentry your name or email
+  address. Because a stack trace is generated automatically at the moment of failure, we
+  cannot guarantee that a fragment of data is never included incidentally; where that is
+  possible we configure Sentry’s data-scrubbing to remove it.
+</p>
+
+<p>
+  Functional Software, Inc. (Sentry) acts as our data processor and provides protection
+  for this data equal to that described in this policy; see the
+  <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>. Reports are retained
+  for a limited period and then deleted automatically.
+</p>

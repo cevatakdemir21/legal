@@ -1,0 +1,201 @@
+{%- comment -%}
+Terms of Use / EULA body. Flags read from the calling page's front matter:
+  has_iap, has_subscriptions, has_accounts, has_ugc, has_backend
+{%- endcomment -%}
+
+<p>
+  These Terms of Use (“Terms”) are an agreement between you and
+  {{ site.developer_name }}, an individual developer based in {{ site.jurisdiction }}
+  (“we”, “us”), covering your use of {{ page.app_name }} (“the App”). By downloading or
+  using the App you accept these Terms. If you do not accept them, do not use the App.
+</p>
+
+<div class="note">
+  <p style="margin:0">
+    These Terms sit alongside Apple’s
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed
+    Application End User License Agreement</a>, which also applies to the App as a
+    minimum. Where these Terms give you more than Apple’s standard agreement, these Terms
+    apply. Where they conflict on a point Apple’s agreement requires, Apple’s agreement
+    applies.
+  </p>
+</div>
+
+<h2>Your licence to use the App</h2>
+
+<p>
+  We grant you a personal, non-exclusive, non-transferable, revocable licence to use one
+  copy of the App on Apple-branded devices that you own or control, as permitted by the
+  App Store Terms of Service and Apple’s Usage Rules. The App is licensed to you, not
+  sold.
+</p>
+
+<p>You may not:</p>
+
+<ul>
+  <li>copy, redistribute, rent, lease, lend, sell or sublicense the App;</li>
+  <li>reverse engineer, decompile or disassemble it, except to the extent that applicable law expressly permits this despite the restriction;</li>
+  <li>remove or alter any copyright or other proprietary notice;</li>
+  <li>use the App to break the law, to infringe anyone’s rights, or to attempt to disrupt or gain unauthorised access to any service the App relies on.</li>
+</ul>
+
+{% if page.has_accounts %}
+<h2>Your account</h2>
+
+<p>
+  You are responsible for keeping your account credentials secure and for activity that
+  takes place under your account. Tell us promptly at
+  <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a> if you believe
+  your account has been used without your permission. You can delete your account, and
+  the personal data attached to it, from within the App at any time.
+</p>
+{% endif %}
+
+<h2>Your content</h2>
+
+<p>
+  You keep all rights in the content you create in the App. We claim no ownership of it
+  and, as explained in the <a href="{{ page.privacy_url | relative_url }}">Privacy
+  Policy</a>, we do not receive it.
+</p>
+
+<p>
+  You are responsible for your own content and for keeping your own copies of anything
+  you would not want to lose. {% if page.has_ugc %}Do not submit content that is unlawful, infringing, abusive or that you have no right to share. We may remove content that breaches these Terms.{% else %}The App is not a backup service.{% endif %}
+</p>
+
+{% if page.has_iap %}
+<h2>Purchases{% if page.has_subscriptions %} and subscriptions{% endif %}</h2>
+
+<p>
+  The App offers optional paid features. All purchases are made through Apple’s App
+  Store and are billed to your Apple Account. Prices are shown in the App before you
+  confirm, in your local currency, and may vary by region.
+</p>
+
+{% if page.has_subscriptions %}
+<p>
+  A subscription renews automatically at the end of each period unless you turn off
+  auto-renewal at least 24 hours before it ends. Your Apple Account is charged for
+  renewal within 24 hours of the end of the current period, at the price then shown for
+  your plan. You can manage or cancel a subscription at any time in
+  <em>Settings → [your name] → Subscriptions</em> on your device. Cancelling stops the
+  next renewal; it does not end the period you have already paid for.
+</p>
+
+<p>
+  Where a free trial is offered, any unused part of it is forfeited if you buy a
+  subscription during the trial.
+</p>
+{% endif %}
+
+<p>
+  Refunds are handled by Apple, not by us, under the App Store Terms of Service. Request
+  one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We
+  will help where we can, but we cannot issue App Store refunds ourselves.
+</p>
+{% endif %}
+
+<h2>Availability and changes</h2>
+
+<p>
+  We may change, suspend or discontinue the App or any of its features, and may release
+  updates that add, alter or remove functionality. We aim to give notice of a significant
+  change where it is practical to do so. The App requires a compatible version of iOS,
+  and some features require a working internet connection or a service provided by a
+  third party, which we do not control.
+</p>
+
+<h2>Disclaimer</h2>
+
+<p>
+  To the fullest extent permitted by law, the App is provided “as is” and “as available”,
+  without warranties of any kind, whether express or implied, including implied
+  warranties of merchantability, fitness for a particular purpose and non-infringement.
+  We do not warrant that the App will be uninterrupted, error-free, or that any defect
+  will be corrected.
+</p>
+
+<p>
+  {{ page.app_name }} is a general-purpose tool. It does not provide medical, legal,
+  financial or other professional advice, and it should not be relied on as a substitute
+  for a qualified professional.
+</p>
+
+<h2>Limitation of liability</h2>
+
+<p>
+  To the fullest extent permitted by law, we are not liable for indirect, incidental,
+  special, consequential or punitive damages, nor for any loss of data, profits or
+  goodwill, arising out of your use of or inability to use the App. Our total liability
+  for all claims relating to the App is limited to the greater of the amount you paid us
+  for the App in the twelve months before the claim, or US$50.
+</p>
+
+<p>
+  Nothing in these Terms excludes or limits liability that cannot lawfully be excluded
+  or limited, including liability for death or personal injury caused by negligence, or
+  for fraud. If you are a consumer, you keep all the statutory rights your local law
+  gives you, and nothing here overrides them.
+</p>
+
+<h2>Apple’s role</h2>
+
+<p>
+  These Terms are between you and us, not Apple, and Apple is not responsible for the
+  App or its content. Apple has no obligation to provide support or maintenance for the
+  App. If the App fails to conform to any applicable warranty, you may notify Apple and
+  Apple will refund the purchase price; to the maximum extent permitted by law, Apple has
+  no other warranty obligation. We, not Apple, are responsible for addressing any claim
+  that the App infringes intellectual property rights, and for any product liability or
+  legal compliance claim relating to the App. Apple and its subsidiaries are third-party
+  beneficiaries of these Terms and may enforce them against you.
+</p>
+
+<p>
+  You represent that you are not located in a country subject to a U.S. Government
+  embargo or designated as a “terrorist supporting” country, and that you are not on any
+  U.S. Government list of prohibited or restricted parties.
+</p>
+
+<h2>Termination</h2>
+
+<p>
+  These Terms apply until terminated. You may end them at any time by deleting the App.
+  We may end them if you materially breach them. On termination you must stop using the
+  App and delete it. The sections on disclaimers, limitation of liability and governing
+  law survive.
+</p>
+
+<h2>Governing law</h2>
+
+<p>
+  These Terms are governed by the laws of {{ site.jurisdiction }}, without regard to its
+  conflict-of-laws rules, and the courts of Istanbul, {{ site.jurisdiction }} have
+  jurisdiction. If you are a consumer resident elsewhere, this does not deprive you of
+  the protection of the mandatory consumer law of your country of residence, and you may
+  bring proceedings in your local courts.
+</p>
+
+<h2>General</h2>
+
+<p>
+  If any provision of these Terms is found unenforceable, the rest remain in force. Our
+  not enforcing a provision is not a waiver of it. These Terms are the entire agreement
+  between you and us about the App, together with the
+  <a href="{{ page.privacy_url | relative_url }}">Privacy Policy</a> and Apple’s
+  agreement referenced above.
+</p>
+
+<p>
+  We may update these Terms. The effective date at the top of this page shows when they
+  last changed; continuing to use the App after a change means you accept the updated
+  Terms.
+</p>
+
+<h2>Contact</h2>
+
+<p>
+  {{ site.developer_name }}<br>
+  Email: <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>
+</p>

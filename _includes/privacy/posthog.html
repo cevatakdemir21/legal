@@ -1,0 +1,35 @@
+<h2>Product analytics (PostHog)</h2>
+
+<p>
+  {{ page.app_name }} uses <a href="https://posthog.com">PostHog</a> to understand how
+  the App is used in aggregate, so we can see which features are worth improving and
+  where people get stuck.
+</p>
+
+<p>PostHog receives:</p>
+
+<ul>
+  <li>a randomly generated identifier for the installation, which is not your name, email address, Apple ID or advertising identifier;</li>
+  <li>events describing which screens are opened and which actions are taken, such as “opened settings” or “created an item”;</li>
+  <li>basic technical context — app version, device model, operating system version, and coarse country- or region-level location derived from your IP address.</li>
+</ul>
+
+<p>
+  <strong>PostHog does not receive the content you create in the App.</strong> Event
+  names describe actions, not the text, images or personal details you enter.
+</p>
+
+<p>
+  PostHog Inc. acts as our data processor and provides protection for this data equal to
+  that described in this policy; see the
+  <a href="https://posthog.com/privacy">PostHog Privacy Policy</a> and
+  <a href="https://posthog.com/dpa">Data Processing Agreement</a>. We do not use PostHog
+  for advertising, and we do not enable cross-app or cross-site tracking.
+</p>
+
+{% if page.analytics_opt_out %}
+<p>
+  You can turn analytics off at any time in the App’s settings. When it is off, no
+  events are sent.
+</p>
+{% endif %}

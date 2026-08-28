@@ -1,0 +1,21 @@
+<h2>Information stored on your device</h2>
+
+<p>
+  Everything you create in {{ page.app_name }} — {{ page.content_description | default: "the content you enter, together with your settings and preferences" }} — is
+  stored locally on your device by the App.
+</p>
+
+<p>
+  This data is not transmitted to us. We operate no server that receives it, and we
+  have no technical means of reading it. It remains under your control: it is included
+  in your device backups if you have those enabled, and it is removed when you delete
+  the App{% if page.services contains 'icloud' %} (see “Deleting your data” below for how iCloud copies are handled){% endif %}.
+</p>
+
+{% if page.in_app_export %}
+<p>
+  The App also lets you export your data to a file and import it back, so you can take a
+  copy with you or move it elsewhere. The export is produced on your device and goes
+  wherever you choose to send it; it does not pass through us.
+</p>
+{% endif %}
