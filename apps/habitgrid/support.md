@@ -12,7 +12,7 @@ effective: 2026-08-28
 </p>
 
 <p style="font-size:1.15rem">
-  <a href="mailto:cevatsupport@gmail.com?subject=HabitGrid%20Support"><strong>cevatsupport@gmail.com</strong></a>
+  <a href="mailto:{{ site.support_email }}?subject={{ page.app_name | uri_escape }}%20Support"><strong>{{ site.support_email }}</strong></a>
 </p>
 
 <p>

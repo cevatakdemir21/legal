@@ -25,5 +25,5 @@ title: Legal & Support
 
 <p>
   For any question about an app, a privacy request, or a bug report, email
-  <a href="mailto:cevatsupport@gmail.com">cevatsupport@gmail.com</a>.
+  <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.
 </p>
