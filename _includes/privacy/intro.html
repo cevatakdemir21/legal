@@ -20,5 +20,8 @@
   {% unless page.services contains 'posthog' or page.services contains 'sentry' %}
   <li>The App contains no analytics, tracking or crash-reporting SDKs.</li>
   {% endunless %}
+  {% if page.analytics_opt_out or page.crash_opt_out %}
+  <li>The App collects anonymous usage and crash data to help us improve it — no advertising, no third-party tracking — and you can turn this off in Settings.</li>
+  {% endif %}
   <li>Your content stays on your device{% if page.services contains 'icloud' %}, and in your own iCloud account if you turn on syncing{% endif %}.</li>
 </ul>

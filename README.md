@@ -28,6 +28,7 @@ effective: 2026-09-01
 services: [icloud, revenuecat, posthog, sentry]
 icloud_default_off: true
 analytics_opt_out: true
+crash_opt_out: true
 content_description: "the notes you write, your tags and your settings"
 ---
 
@@ -64,7 +65,8 @@ Supporting flags:
 | `icloud_default_off: true` | States that sync is opt-in. Only set it if that is true. |
 | `in_app_export: true` | Mentions the app's own export/import. |
 | `in_app_erase: true` | Adds "use the erase option in Settings" to the deletion list. |
-| `analytics_opt_out: true` | States that analytics can be turned off in-app, and makes consent the legal basis. Only set it if the toggle exists. |
+| `analytics_opt_out: true` | Analytics is on by default, legitimate interest is the basis, and it can be turned off in-app. Only set it if that switch exists. Leave it unset for an opt-in app — then consent is the basis. |
+| `crash_opt_out: true` | Same, for crash reporting: says it is on by default and can be turned off in the App's settings. |
 | `supabase_writes: true` | Says the app also *sends* data to Supabase, not just reads. |
 | `supabase_purpose`, `supabase_description`, `supabase_written_data` | Wording for the Supabase section. |
 

@@ -7,10 +7,10 @@
 
 <ul>
   <li><strong>Performance of a contract</strong> — the processing needed to make the App work as you have asked it to{% if page.services contains 'revenuecat' %}, including recognising a purchase you have made{% endif %}.</li>
-  <li><strong>Legitimate interests</strong> — keeping the App stable and secure{% if page.services contains 'sentry' %}, which is why crash reports are collected{% endif %}, balanced against your interest in privacy.</li>
-  {% if page.services contains 'posthog' %}
-  <li><strong>Consent</strong>{% unless page.analytics_opt_out %}, or our legitimate interest in improving the App,{% endunless %} for product analytics. Where consent is the basis, you can withdraw it at any time and processing stops.</li>
-  {% endif %}
+  <li><strong>Legitimate interests</strong> — keeping the App stable and secure{% if page.services contains 'sentry' %}, which is why crash reports are collected{% endif %}{% if page.services contains 'posthog' and page.analytics_opt_out %}, and seeing in aggregate how the App is used so we can improve it, which is why product analytics is collected{% endif %}, balanced against your interest in privacy.{% if page.analytics_opt_out or page.crash_opt_out %} You can object at any time in the App’s settings{% if page.analytics_opt_out and page.crash_opt_out %} — analytics and crash reports have separate switches{% endif %}, and collection stops.{% endif %}</li>
+  {% if page.services contains 'posthog' %}{% unless page.analytics_opt_out %}
+  <li><strong>Consent</strong>, or our legitimate interest in improving the App, for product analytics. Where consent is the basis, you can withdraw it at any time and processing stops.</li>
+  {% endunless %}{% endif %}
 </ul>
 
 <h2>How long we keep information</h2>

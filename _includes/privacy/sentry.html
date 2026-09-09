@@ -27,3 +27,10 @@
   <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>. Reports are retained
   for a limited period and then deleted automatically.
 </p>
+
+{% if page.crash_opt_out %}
+<p>
+  Crash reporting is on by default. You can turn it off at any time in the App’s
+  settings.
+</p>
+{% endif %}
