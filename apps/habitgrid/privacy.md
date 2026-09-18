@@ -20,11 +20,16 @@ services: [icloud, notifications, storekit, revenuecat, posthog, sentry]
 icloud_default_off: true
 # As of 9 Sep 2026 both analytics and crash reporting are ON by default, on the
 # GDPR legitimate-interest basis (all anonymous — no identify, sendDefaultPii
-# off, EU hosts). A one-time notice after onboarding discloses it; Settings has
-# two switches — "Share Usage Data" (analytics) and "Crash Reports" — that
-# withdraw it, and a decline from the earlier opt-in prompt is still honoured.
-# These two flags render "legitimate interest + opt-out" rather than "consent".
-# See RootView privacy notice + SettingsView + PrivacyConsent.swift.
+# off, EU hosts). Settings has two switches — "Share Usage Data" (analytics) and
+# "Crash Reports" — that withdraw it, and a decline from the earlier opt-in
+# prompt is still honoured. These two flags render "legitimate interest +
+# opt-out" rather than "consent". See SettingsView + PrivacyConsent.swift.
+#
+# 18 Sep 2026: the one-time in-app notice that used to follow onboarding was
+# removed. Nothing required it — App Review 5.1.1(ii) asks for a way to withdraw
+# (the two switches) and a Privacy Policy that explains it (this page) — and HIG
+# Alerts > Best practices rules out an informational alert at launch. THIS PAGE IS
+# NOW THE ONLY DISCLOSURE, so the Art. 13 detail below has to stay accurate.
 analytics_opt_out: true
 crash_opt_out: true
 in_app_export: true
