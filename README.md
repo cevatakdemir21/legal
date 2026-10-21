@@ -73,6 +73,7 @@ Supporting flags:
 | `icloud_default_on: true` | States that sync is on by default for devices signed in to iCloud. Only set it if that is true. |
 | `icloud_content` | A paragraph saying what syncs and how it is encrypted. |
 | `icloud_silent_push: true` | Explains CloudKit's silent pushes (the app has the remote-notification background mode). |
+| `single_switch: true` | With `analytics_opt_out` and `crash_opt_out`: one switch in the app stops both (instead of two separate ones). |
 | `crash_no_switch: true` | Crash reporting is on for everyone and the app has no switch for it. Use instead of `crash_opt_out`. Adds an objection-by-email paragraph. |
 | `posthog_events_text`, `posthog_context_text` | Replace the default event and technical-context bullets of the PostHog section with the app's own. |
 | `sentry_identifier_text`, `sentry_extra` | Replace the identifier bullet and add bullets (a list) to the Sentry section. |

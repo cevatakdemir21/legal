@@ -34,7 +34,8 @@
 {% if page.crash_opt_out %}
 <p>
   Crash reporting is on by default. You can turn it off at any time in the App’s
-  settings.
+  settings.{% if page.single_switch %} It is the same switch as for product analytics, so
+  turning it off stops both.{% endif %}
 </p>
 {% elsif page.crash_no_switch %}
 <p>
