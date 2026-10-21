@@ -4,6 +4,7 @@
   {{ page.app_name }} can keep your data in step across your devices using Apple’s
   iCloud, through the CloudKit framework built into iOS.
   {% if page.icloud_default_off %}This is off by default and only starts when you turn it on in the App’s settings.{% endif %}
+  {% if page.icloud_default_on %}This is on by default for devices that are signed in to iCloud, and you can turn it off at any time in the App’s settings.{% endif %}
 </p>
 
 <p>
@@ -14,6 +15,16 @@
   <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a> and your
   iCloud terms with Apple.
 </p>
+
+{% if page.icloud_content %}<p>{{ page.icloud_content }}</p>{% endif %}
+
+{% if page.icloud_silent_push %}
+<p>
+  CloudKit also uses Apple’s silent push notifications to tell your device that something
+  changed in iCloud. They travel from Apple to your device and are never shown as alerts.
+  We do not run a push server and we do not collect your device’s push token.
+</p>
+{% endif %}
 
 <p>
   Turning syncing off stops further data from leaving your device. Any copy already in

@@ -52,6 +52,7 @@ at the new permalinks.
 | `sentry` | Crash and error reporting |
 | `revenuecat` | Purchases and subscriptions |
 | `supabase` | Hosted content — explicitly *not* accounts or auth |
+| `documents` | Documents, camera, photos, on-device text recognition, Spotlight/Siri, sharing (a document app) |
 
 The intro and the on-device-storage section are always emitted, as is the tail
 (legal bases, retention, deletion, children, GDPR/KVKK/CCPA rights, transfers,
@@ -69,6 +70,12 @@ Supporting flags:
 | `crash_opt_out: true` | Same, for crash reporting: says it is on by default and can be turned off in the App's settings. |
 | `supabase_writes: true` | Says the app also *sends* data to Supabase, not just reads. |
 | `supabase_purpose`, `supabase_description`, `supabase_written_data` | Wording for the Supabase section. |
+| `icloud_default_on: true` | States that sync is on by default for devices signed in to iCloud. Only set it if that is true. |
+| `icloud_content` | A paragraph saying what syncs and how it is encrypted. |
+| `icloud_silent_push: true` | Explains CloudKit's silent pushes (the app has the remote-notification background mode). |
+| `crash_no_switch: true` | Crash reporting is on for everyone and the app has no switch for it. Use instead of `crash_opt_out`. Adds an objection-by-email paragraph. |
+| `posthog_events_text`, `posthog_context_text` | Replace the default event and technical-context bullets of the PostHog section with the app's own. |
+| `sentry_identifier_text`, `sentry_extra` | Replace the identifier bullet and add bullets (a list) to the Sentry section. |
 
 ## Terms front matter
 
@@ -78,6 +85,9 @@ has_iap: true                  # adds the purchases section
 has_subscriptions: true        # adds auto-renewal / cancellation terms
 has_accounts: false            # adds account-security + in-app deletion clause
 has_ugc: false                 # adds content moderation clause
+has_trial: false               # drops the free-trial sentence (omit it if the app offers a trial)
+has_esignature: true           # adds the 'Signatures and documents' section (not a qualified e-signature)
+free_tier_text: "..."          # a paragraph on what is free and what needs the subscription
 ```
 
 The Terms double as the EULA and reference Apple's standard

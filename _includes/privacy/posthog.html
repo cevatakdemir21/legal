@@ -10,8 +10,10 @@
 
 <ul>
   <li>a randomly generated identifier for the installation, which is not your name, email address, Apple ID or advertising identifier;</li>
-  <li>a small number of events marking milestones in setting the App up and using its main features — for example finishing onboarding or creating an item — together with the App being opened, updated or closed. We do not record which screens you view or which controls you tap.</li>
-  <li>basic technical context — app version, device model, operating system version, and coarse country- or region-level location derived from your IP address.</li>
+  {% if page.posthog_events_text %}<li>{{ page.posthog_events_text }}</li>{% else %}
+  <li>a small number of events marking milestones in setting the App up and using its main features — for example finishing onboarding or creating an item — together with the App being opened, updated or closed. We do not record which screens you view or which controls you tap.</li>{% endif %}
+  {% if page.posthog_context_text %}<li>{{ page.posthog_context_text }}</li>{% else %}
+  <li>basic technical context — app version, device model, operating system version, and coarse country- or region-level location derived from your IP address.</li>{% endif %}
 </ul>
 
 <p>

@@ -11,6 +11,15 @@ title: Legal & Support
 
 <ul class="app-list">
   <li>
+    <h2>eSign</h2>
+    <p>Sign PDFs, pictures and scans on iPhone and iPad.</p>
+    <p class="links">
+      <a href="{{ '/esign/privacy/' | relative_url }}">Privacy Policy</a>
+      <a href="{{ '/esign/terms/' | relative_url }}">Terms of Use</a>
+      <a href="{{ '/esign/support/' | relative_url }}">Support</a>
+    </p>
+  </li>
+  <li>
     <h2>HabitGrid</h2>
     <p>A habit tracker for iPhone and iPad.</p>
     <p class="links">

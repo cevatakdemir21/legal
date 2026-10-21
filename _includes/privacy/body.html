@@ -9,6 +9,7 @@ Assembles a privacy policy from the flags in the calling page's front matter.
 
 {% include privacy/intro.html %}
 {% include privacy/local-data.html %}
+{% if page.services contains 'documents' %}{% include privacy/documents.html %}{% endif %}
 
 {% if page.services contains 'icloud' %}{% include privacy/icloud.html %}{% endif %}
 {% if page.services contains 'supabase' %}{% include privacy/supabase.html %}{% endif %}

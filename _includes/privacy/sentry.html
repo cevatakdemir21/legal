@@ -10,7 +10,10 @@
 <ul>
   <li>the technical stack trace describing where in the code the failure occurred;</li>
   <li>app version, device model, operating system version, and device state at the time (such as free memory);</li>
-  <li>a randomly generated installation identifier, so repeated reports from one device can be grouped.</li>
+  {% if page.sentry_identifier_text %}<li>{{ page.sentry_identifier_text }}</li>{% else %}
+  <li>a randomly generated installation identifier, so repeated reports from one device can be grouped.</li>{% endif %}
+  {% for item in page.sentry_extra %}<li>{{ item }}</li>
+  {% endfor %}
 </ul>
 
 <p>
@@ -32,5 +35,14 @@
 <p>
   Crash reporting is on by default. You can turn it off at any time in the App’s
   settings.
+</p>
+{% elsif page.crash_no_switch %}
+<p>
+  Crash reporting is on in every copy of the App and the App has no switch for it. It
+  collects only the technical details listed above, and our basis is our legitimate
+  interest in keeping the App working. If you object, email
+  <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a> and we will delete
+  the reports we can identify as yours; the device model, app version and approximate
+  date help us find them.
 </p>
 {% endif %}

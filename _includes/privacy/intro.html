@@ -21,7 +21,7 @@
   <li>The App contains no analytics, tracking or crash-reporting SDKs.</li>
   {% endunless %}
   {% if page.analytics_opt_out or page.crash_opt_out %}
-  <li>The App collects anonymous usage and crash data to help us improve it — no advertising, no third-party tracking — and you can turn this off in Settings.</li>
+  <li>The App collects anonymous usage and crash data to help us improve it — no advertising, no third-party tracking — and {% if page.crash_no_switch %}you can turn off the usage data in Settings (crash reports have no switch; see below){% else %}you can turn this off in Settings{% endif %}.</li>
   {% endif %}
-  <li>Your content stays on your device{% if page.services contains 'icloud' %}, and in your own iCloud account if you turn on syncing{% endif %}.</li>
+  <li>Your content stays on your device{% if page.services contains 'icloud' %}, and in your own iCloud account {% if page.icloud_default_on %}when iCloud sync is on (it is on by default, and you can turn it off in Settings){% else %}if you turn on syncing{% endif %}{% endif %}.</li>
 </ul>
