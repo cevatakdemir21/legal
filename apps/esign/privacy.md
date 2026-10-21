@@ -18,12 +18,14 @@ effective: 2026-10-21
 #                  On by default; the SAME "Analytics" switch stops it (CrashReporting.applyAllowed,
 #                  called from SettingsStore.analyticsEnabled), hence single_switch below.
 #   - storekit   : requestReview after a completed share, and the "Rate us" link
+#   - Keychain   : ShareLedger records one hash per shared signed copy (share_counter below)
 # Keep this in step with the App Privacy label in App Store Connect and with
 # eSign/PrivacyInfo.xcprivacy: adding or removing an SDK means updating all three.
 services: [documents, icloud, revenuecat, posthog, sentry, storekit]
 
 content_description: "your documents (PDFs, pictures and scans), your signatures and stamps, the items you place on pages, form values, the text recognised on scans, and your settings"
 
+share_counter: "To apply the free allowance of signed documents, the App keeps a record of the signed copies you have shared. Each one is a short code (a hash) made from the document’s internal ID and from which signature, text, date, mark and form values are on it, never the content itself or the document’s name. The record is kept in the Keychain on your device, so deleting a document or the App does not reset it, and it syncs through iCloud Keychain if you have that turned on. Only Apple holds it there; we do not receive it. Erasing the device removes it."
 icloud_default_on: true
 icloud_silent_push: true
 icloud_content: "What syncs: your documents with the items placed on them and their form values, your signatures and stamps and their order, and the Trash. Document names, placed items and form values are stored in CloudKit’s end-to-end encrypted fields, and files are stored as CloudKit assets, which Apple encrypts. Deleting a document, signature or stamp on one device deletes it from your iCloud and from your other devices. A document too large for iCloud stays on the device it is on. Settings such as the theme stay on each device."

@@ -46,6 +46,12 @@
   </li>
 </ul>
 
+{% if page.share_counter %}
+<p>
+  <strong>Free shares.</strong> {{ page.share_counter }}
+</p>
+{% endif %}
+
 <p>
   The App keeps its files in storage that iOS protects while your device is locked.
   Documents you delete move to the App’s Trash and are removed for good after 30 days.

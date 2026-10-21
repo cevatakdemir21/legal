@@ -13,7 +13,7 @@ has_ugc: false
 # eSign has no free trial. Set to true again if one is ever offered.
 has_trial: false
 has_esignature: true
-free_tier_text: "eSign is free to download. You can import, edit and sign documents and share or export a limited number of signed documents (currently 3) for free. Sharing or exporting more signed documents needs eSign Pro, an auto-renewing subscription. What is free and what needs eSign Pro may change in a future version. A change will not take away what you have already paid for during the period you paid for."
+free_tier_text: "eSign is free to download. You can import, edit and sign documents and share or export a limited number of signed documents (currently 3) for free. Sharing or exporting more signed documents needs eSign Pro, an auto-renewing subscription. A signed document counts once each time its signed content is shared. Sharing exactly the same signed copy again does not use another one, but signing it differently and sharing it again does. The count is kept in the Keychain on your device (and in iCloud Keychain, if on), so deleting a document, a signature or the App does not reset it. What is free and what needs eSign Pro may change in a future version. A change will not take away what you have already paid for during the period you paid for."
 ---
 
 {% include terms/body.html %}
