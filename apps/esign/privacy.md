@@ -15,7 +15,8 @@ effective: 2026-10-21
 #                  data; on by default, legitimate interest, Settings > Legal > "Analytics"
 #                  switch (Analytics.swift, PostHogAnalyticsClient.swift). Every event carries
 #                  $geoip_disable (no location) and the project discards IPs (anonymize_ips).
-#   - sentry     : crash, hang and watchdog reports, Sentry DE region, sendDefaultPii off.
+#   - sentry     : crash, hang and watchdog reports, Sentry DE region, sendDefaultPii off;
+#                  MetricKit diagnostics (hangs, CPU and disk-write exceptions: stacks and counts).
 #                  On by default; the SAME "Analytics" switch stops it (CrashReporting.applyAllowed,
 #                  called from SettingsStore.analyticsEnabled), hence single_switch below.
 #   - storekit   : requestReview after a completed share, and the "Rate us" link
@@ -42,7 +43,7 @@ sentry_identifier_text: "a random technical identifier that Sentry’s software 
 sentry_extra:
   - "a few recent app events leading up to the failure, for example the App moving to the background;"
   - "anonymous session start and end markers, so we can measure how many sessions end in a crash;"
-  - "reports of the App freezing or being ended by the system."
+  - "reports of the App freezing or being ended by the system, and the diagnostics iOS itself makes when the App freezes or uses unusually much processor time or storage writing (stack traces and counts only)."
 ---
 
 {% include privacy/body.html %}
