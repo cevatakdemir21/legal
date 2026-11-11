@@ -1,6 +1,6 @@
 {%- comment -%}
 Terms of Use / EULA body. Flags read from the calling page's front matter:
-  has_iap, has_subscriptions, has_accounts, has_ugc
+  has_iap, has_subscriptions, has_accounts, has_ugc, has_esignature, has_id_check
 {%- endcomment -%}
 
 <p>
@@ -52,6 +52,7 @@ Terms of Use / EULA body. Flags read from the calling page's front matter:
 {% endif %}
 
 {% if page.has_esignature %}{% include terms/esignature.html %}{% endif %}
+{% if page.has_id_check %}{% include terms/id-check.html %}{% endif %}
 
 <h2>Your content</h2>
 

@@ -1,0 +1,91 @@
+<h2>Scanning IDs: the camera and what is read</h2>
+
+<p>
+  {{ page.app_name }} is used by a person checking IDs, for example at the door of a
+  venue. This section explains what happens to the information on an ID that is scanned,
+  both for the person using the App and for the person whose ID it is.
+</p>
+
+<ul>
+  <li>
+    <strong>Camera.</strong> The camera is used only to read the barcode on the back of a
+    driver license or ID card, or the two or three machine-readable lines on a passport or
+    passport card. iOS asks for permission first, and it can be withdrawn at any time in
+    <em>Settings → {{ page.app_name }} → Camera</em>. Reading happens on the device. Camera
+    images and video are never saved and are never sent anywhere.
+  </li>
+  <li>
+    <strong>What is read.</strong> A barcode or passport line contains more than the App
+    needs. The App reads it in memory, works out the age and whether the ID has expired,
+    and then discards the rest.
+  </li>
+  <li>
+    <strong>What is saved on the device.</strong> For each scan: the name, the gender shown
+    on the ID, the age in years, the result of the check, the minimum age that was set, the
+    way the ID was read, the type of document, the issuing state, province or country, the
+    expiration date, and the date and time of the scan.
+  </li>
+  <li>
+    <strong>What is never saved.</strong> The address, the photo, the date of birth, the ID
+    or passport number, the raw barcode or passport lines, and any camera image.
+  </li>
+  <li>
+    <strong>Recognising a returning guest.</strong> To count visits and to match the VIP and
+    Banned lists, the App keeps a one-way code (a salted SHA-256 hash) made from the ID
+    number and the issuer. The number cannot be read back from the code. The random value
+    used to make the code is created on the device, kept in the device’s keychain, and never
+    leaves it, so the code means nothing on any other device.
+  </li>
+  <li>
+    <strong>VIP and Banned lists and notes.</strong> If the person using the App marks a
+    guest as VIP or Banned, or writes a note, the App stores that code together with the
+    name, the gender, the note, the date added and the date last seen. These entries stay
+    until they are removed in the App.
+  </li>
+  <li>
+    <strong>Entering a date of birth by hand.</strong> The date typed is used once to work
+    out the age and is not saved. The saved record has no name and no code.
+  </li>
+</ul>
+
+<h2>How long scans are kept, and removing them</h2>
+
+<ul>
+  <li>Saved scans are deleted automatically after {{ page.idscan_retention_days | default: 90 }} days. This period can be changed in the App’s settings, including to keep scans until they are deleted by hand.</li>
+  <li><em>Save History</em> can be turned off in the App’s settings. New scans are then checked and shown, but not saved.</li>
+  <li><em>Delete All History</em> in the App’s settings removes every saved scan at once. Scans from a chosen period can be deleted from the History screen.</li>
+  <li>A guest is removed from the VIP or Banned list by swiping the entry in that list.</li>
+  <li>Deleting the App removes all of the above from the device. The random value in the keychain may remain on the device afterwards. It contains no information about anyone.</li>
+</ul>
+
+<h2>Exporting and sharing</h2>
+
+<p>
+  The person using the App can export the scan history as a CSV file. The file contains
+  the date, time, name, gender, age, minimum age, result, method, document type and
+  issuer for each scan, and the App warns that it includes names before creating it. A
+  summary of the statistics, which contains counts only and no names, can also be shared.
+  Either goes to the app or person chosen, for example Mail, Messages, AirDrop or Files.
+  It does not pass through us, and from that moment the recipient’s own terms and privacy
+  practices apply.
+</p>
+
+<h2>If you email us from the App</h2>
+
+<p>
+  <em>Contact Support</em> and <em>Report a Problem</em> open an email draft that you can
+  read and edit before sending. The draft contains the App’s version, the iOS version and
+  the device model. A problem report also contains the result of the scan, the way it was
+  read, the document type, the issuer and the barcode version. It never contains a name,
+  an age, a code or the time of a scan.
+</p>
+
+<h2>If your ID was scanned with {{ page.app_name }}</h2>
+
+<p>
+  The record of your scan is held on the device of the person or business that scanned
+  it, not by us. We cannot see it, change it or delete it. To ask what is held about you,
+  or to ask for it to be deleted, contact that person or business. They decide why IDs
+  are scanned and how long records are kept, and they are responsible for following the
+  laws that apply where they operate.
+</p>

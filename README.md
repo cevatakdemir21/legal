@@ -53,6 +53,7 @@ at the new permalinks.
 | `revenuecat` | Purchases and subscriptions |
 | `supabase` | Hosted content — explicitly *not* accounts or auth |
 | `documents` | Documents, camera, photos, on-device text recognition, Spotlight/Siri, sharing (a document app) |
+| `idscan` | Scanning IDs with the camera: what is read, saved and never saved, the one-way code, VIP/Banned lists, retention, CSV export, support email, and a section for the person whose ID was scanned |
 
 The intro and the on-device-storage section are always emitted, as is the tail
 (legal bases, retention, deletion, children, GDPR/KVKK/CCPA rights, transfers,
@@ -76,6 +77,7 @@ Supporting flags:
 | `single_switch: true` | With `analytics_opt_out` and `crash_opt_out`: one switch in the app stops both (instead of two separate ones). |
 | `crash_no_switch: true` | Crash reporting is on for everyone and the app has no switch for it. Use instead of `crash_opt_out`. Adds an objection-by-email paragraph. |
 | `posthog_events_text`, `posthog_context_text` | Replace the default event and technical-context bullets of the PostHog section with the app's own. |
+| `idscan_retention_days` | Default number of days before saved scans are deleted (defaults to 90). |
 | `sentry_identifier_text`, `sentry_extra` | Replace the identifier bullet and add bullets (a list) to the Sentry section. |
 
 ## Terms front matter
@@ -88,6 +90,7 @@ has_accounts: false            # adds account-security + in-app deletion clause
 has_ugc: false                 # adds content moderation clause
 has_trial: false               # drops the free-trial sentence (omit it if the app offers a trial)
 has_esignature: true           # adds the 'Signatures and documents' section (not a qualified e-signature)
+has_id_check: true             # adds 'Checking IDs' (cannot confirm an ID is real) and 'Other people's information'
 free_tier_text: "..."          # a paragraph on what is free and what needs the subscription
 ```
 

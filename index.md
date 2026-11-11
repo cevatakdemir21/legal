@@ -20,6 +20,15 @@ title: Legal & Support
     </p>
   </li>
   <li>
+    <h2>ID Scanner</h2>
+    <p>Check age from the barcode on an ID or the lines on a passport, on iPhone and iPad.</p>
+    <p class="links">
+      <a href="{{ '/idscanner/privacy/' | relative_url }}">Privacy Policy</a>
+      <a href="{{ '/idscanner/terms/' | relative_url }}">Terms of Use</a>
+      <a href="{{ '/idscanner/support/' | relative_url }}">Support</a>
+    </p>
+  </li>
+  <li>
     <h2>HabitGrid</h2>
     <p>A habit tracker for iPhone and iPad.</p>
     <p class="links">
