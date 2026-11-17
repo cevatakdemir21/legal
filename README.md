@@ -77,7 +77,7 @@ Supporting flags:
 | `single_switch: true` | With `analytics_opt_out` and `crash_opt_out`: one switch in the app stops both (instead of two separate ones). |
 | `crash_no_switch: true` | Crash reporting is on for everyone and the app has no switch for it. Use instead of `crash_opt_out`. Adds an objection-by-email paragraph. |
 | `posthog_events_text`, `posthog_context_text` | Replace the default event and technical-context bullets of the PostHog section with the app's own. |
-| `idscan_retention_days` | Default number of days before saved scans are deleted (defaults to 90). |
+| `idscan_retention_days` | Number of days after which saved scans are deleted automatically (defaults to 90). |
 | `sentry_identifier_text`, `sentry_extra` | Replace the identifier bullet and add bullets (a list) to the Sentry section. |
 
 ## Terms front matter
