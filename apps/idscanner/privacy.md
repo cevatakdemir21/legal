@@ -7,11 +7,12 @@ effective: 2026-11-18
 # Adds a "Terms of Use and licence agreement" section linking the Terms and Apple's standard EULA.
 terms_url: /idscanner/terms/
 
-# What the app actually ships (checked against the code on 17 Nov 2026):
+# What the app actually ships (checked against the code on 18 Nov 2026):
 #   - idscan     : camera reads PDF417 barcodes and passport MRZ lines on device; saved fields
 #                  (incl. date of birth and issue date since 12 Nov), never-saved fields, salted
 #                  SHA-256 code, VIP/Banned lists and notes, fixed 90-day retention (no setting,
-#                  no Save History switch), deleting scans by period in History, CSV export,
+#                  no Save History switch), deleting one scan (swipe in History, Delete Scan in
+#                  ID Details; since 18 Nov) or scans by period in History, CSV export,
 #                  Contact Support / Request a Feature email drafts
 #   - icloud     : SwiftData + CloudKit private database, OFF by default (Settings > General >
 #                  iCloud Sync); scans, VIP/Banned lists and a few settings; the salt goes

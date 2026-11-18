@@ -3,7 +3,7 @@ layout: legal
 permalink: /idscanner/support/
 title: Support
 app_name: ID Scanner
-effective: 2026-11-17
+effective: 2026-11-18
 ---
 
 <p>
@@ -102,9 +102,9 @@ effective: 2026-11-17
 
 <p>
   On your device, and in your own iCloud account if you turn on <em>iCloud Sync</em> in
-  Settings (it is off by default). Saved scans are deleted automatically after 90 days. You
-  can delete scans from today, the last 7 days, the last 30 days or all time from the
-  History screen. The <a href="{{ '/idscanner/privacy/' | relative_url }}">Privacy
+  Settings (it is off by default). Saved scans are deleted automatically after 90 days. To
+  delete one scan, swipe it in the History screen. You can also delete scans from today,
+  the last 7 days, the last 30 days or all time from the History screen. The <a href="{{ '/idscanner/privacy/' | relative_url }}">Privacy
   Policy</a> lists exactly what is saved and what never is.
 </p>
 

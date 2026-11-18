@@ -55,7 +55,7 @@
 
 <ul>
   <li>Saved scans are deleted automatically after {{ page.idscan_retention_days | default: 90 }} days. VIP and Banned entries are not affected.</li>
-  <li>Scans from today, the last 7 days, the last 30 days or all time can be deleted at any time from the History screen.</li>
+  <li>A single scan can be deleted at any time by swiping it in the History screen or from its details screen. Scans from today, the last 7 days, the last 30 days or all time can be deleted together from the History screen.</li>
   <li>A guest is removed from the VIP or Banned list by swiping the entry in that list.</li>
   <li>Deleting the App removes all of the above from the device{% if page.services contains 'icloud' %}; copies in iCloud are covered under “iCloud sync” below{% endif %}. The random value in the keychain may remain on the device afterwards. It contains no information about anyone.</li>
 </ul>
