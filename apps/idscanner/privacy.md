@@ -3,7 +3,9 @@ layout: legal
 permalink: /idscanner/privacy/
 title: Privacy Policy
 app_name: ID Scanner
-effective: 2026-11-17
+effective: 2026-11-18
+# Adds a "Terms of Use and licence agreement" section linking the Terms and Apple's standard EULA.
+terms_url: /idscanner/terms/
 
 # What the app actually ships (checked against the code on 17 Nov 2026):
 #   - idscan     : camera reads PDF417 barcodes and passport MRZ lines on device; saved fields

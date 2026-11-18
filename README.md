@@ -75,6 +75,7 @@ Supporting flags:
 | `icloud_content` | A paragraph saying what syncs and how it is encrypted. |
 | `icloud_silent_push: true` | Explains CloudKit's silent pushes (the app has the remote-notification background mode). |
 | `single_switch: true` | With `analytics_opt_out` and `crash_opt_out`: one switch in the app stops both (instead of two separate ones). |
+| `terms_url` | The app's Terms of Use permalink (e.g. `/myapp/terms/`). Adds a short section linking the Terms and Apple's standard EULA. |
 | `crash_no_switch: true` | Crash reporting is on for everyone and the app has no switch for it. Use instead of `crash_opt_out`. Adds an objection-by-email paragraph. |
 | `posthog_events_text`, `posthog_context_text` | Replace the default event and technical-context bullets of the PostHog section with the app's own. |
 | `idscan_retention_days` | Number of days after which saved scans are deleted automatically (defaults to 90). |

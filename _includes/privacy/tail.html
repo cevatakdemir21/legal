@@ -100,6 +100,18 @@
   cannot guarantee absolute security.
 </p>
 
+{% if page.terms_url %}
+<h2>Terms of Use and licence agreement</h2>
+
+<p>
+  Your use of {{ page.app_name }} is governed by our
+  <a href="{{ page.terms_url | relative_url }}">Terms of Use</a> and by Apple’s standard
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed
+  Application End User License Agreement</a> (EULA). This policy explains how information
+  is handled; those documents set out the rest of the agreement between you and us.
+</p>
+{% endif %}
+
 <h2>Changes to this policy</h2>
 
 <p>
